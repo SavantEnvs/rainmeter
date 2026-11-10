@@ -1,0 +1,10 @@
+project: savantenvs/rainmeter
+target: fuzz_mathparser
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_mathparser/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_mathparser
+    libfuzzer: true
+    timeout: 5
+    dictionary: /mayhem/mayhem/fuzz_mathparser/fuzz_mathparser.dict
