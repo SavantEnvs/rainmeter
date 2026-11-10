@@ -1,0 +1,9 @@
+project: savantenvs/rainmeter
+target: fuzz_stringparser
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_stringparser/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_stringparser
+    libfuzzer: true
+    timeout: 5
